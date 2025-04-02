@@ -160,17 +160,46 @@ document.addEventListener("DOMContentLoaded", function () {
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
+      
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const subject = document.getElementById("subject").value;
       const message = document.getElementById("message").value;
-
+      
       if (name && email && subject && message) {
-        // Here you would normally send the data to a server
-        // For demo purposes, we'll just show an alert
-        alert("Thank you for your message! I will get back to you soon.");
-        contactForm.reset();
+        const submitBtn = document.querySelector(".submit-btn");
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = "Sending...";
+        submitBtn.disabled = true;
+        
+        const formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("subject", subject);
+        formData.append("message", message);
+        
+        fetch("https://formspree.io/f/mldjpdbq", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then(response => {
+            if (response.ok) {
+              alert("Thank you for your message! I will get back to you soon.");
+              contactForm.reset();
+            } else {
+              throw new Error("Oops! There was a problem sending your message.");
+            }
+          })
+          .catch(error => {
+            alert(error.message);
+          })
+          .finally(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          });
       } else {
         alert("Please fill in all fields.");
       }
