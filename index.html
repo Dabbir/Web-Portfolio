@@ -6,11 +6,22 @@
     <title>Dabbir's Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- Add Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Add Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Add AOS Library for scroll animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Add Chart.js for radar chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -44,7 +55,11 @@
       <!-- Landing Section -->
       <section id="home" class="landing">
         <div class="landing-content">
-          <div class="landing-text" data-aos="fade-right" data-aos-duration="1000">
+          <div
+            class="landing-text"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <h1 class="typing-effect">Hi, I'm Dabbir</h1>
             <p data-aos="fade-up" data-aos-delay="300">
               I am currently studying at Institut Teknologi Bandung (ITB) with a
@@ -56,12 +71,26 @@
               innovative solutions.
             </p>
             <div class="btn-container" data-aos="fade-up" data-aos-delay="600">
-              <a href="./assets/CV Ahmad Mudabbir Arif 2025.pdf" class="cv-btn" id="download-cv" download>Download CV</a>
+              <a
+                href="./assets/CV Ahmad Mudabbir Arif 2025.pdf"
+                class="cv-btn"
+                id="download-cv"
+                download
+                >Download CV</a
+              >
               <a href="#contact" class="contact-btn">Contact Me</a>
             </div>
           </div>
-          <div class="landing-image" data-aos="fade-left" data-aos-duration="1000">
-            <img src="./assets/profile-1.jpg" alt="Dabbir's Photo" class="profile-pic">
+          <div
+            class="landing-image"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <img
+              src="./assets/profile-1.jpg"
+              alt="Dabbir's Photo"
+              class="profile-pic"
+            />
           </div>
         </div>
         <div class="landing-bg"></div>
@@ -131,160 +160,256 @@
               </p>
             </div>
             <div class="social-media">
-              <a href="https://www.linkedin.com/in/ahmad-mudabbir-1261731a7/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://x.com/homiipedd" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/amd.a_/" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://github.com/Dabbir/" target="_blank"><i class="fab fa-github"></i></a>
+              <a
+                href="https://www.linkedin.com/in/ahmad-mudabbir-1261731a7/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://x.com/homiipedd" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/amd.a_/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://github.com/Dabbir/" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
           </div>
           <div class="resume-right">
+            <!-- New interactive skills section -->
             <div class="resume-section">
               <h4>Field of Expertise</h4>
-              <div class="skill-item">
-                <span class="skill-name">Software Engineer</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="30%"></div>
+              <div class="skills-container">
+                <div class="skill-card" data-skill-level="2">
+                  <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <h5>Software Engineer</h5>
+                  <div class="skill-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="skill-details">
+                    <p>
+                      Building efficient, maintainable, and scalable software
+                      solutions.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Data Scientist</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="10%"></div>
+                <div class="skill-card" data-skill-level="1">
+                  <div class="skill-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h5>Data Scientist</h5>
+                  <div class="skill-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="skill-details">
+                    <p>
+                      Analyzing and interpreting complex data to support
+                      decision-making.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Full Stack Developer</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="40%"></div>
+                <div class="skill-card" data-skill-level="2">
+                  <div class="skill-icon">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <h5>Full Stack Developer</h5>
+                  <div class="skill-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="skill-details">
+                    <p>
+                      Creating seamless experiences across frontend and backend
+                      systems.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- Programming Languages Section -->
             <div class="resume-section">
               <h4>Programming Languages</h4>
-              <div class="skill-item">
-                <span class="skill-name">Python</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="60%"></div>
+              <div class="skill-hexagons">
+                <div class="hexagon-item" data-skill="Python" data-level="6">
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fab fa-python"></i>
+                      <span>Python</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">HTML/CSS</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="85%"></div>
+                <div class="hexagon-item" data-skill="HTML/CSS" data-level="9">
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fab fa-html5"></i>
+                      <span>HTML/CSS</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">JavaScript</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="75%"></div>
+                <div
+                  class="hexagon-item"
+                  data-skill="JavaScript"
+                  data-level="8"
+                >
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fab fa-js"></i>
+                      <span>JavaScript</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">TypeScript</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="75%"></div>
+                <div
+                  class="hexagon-item"
+                  data-skill="TypeScript"
+                  data-level="8"
+                >
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fab fa-js"></i>
+                      <span>TypeScript</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Java</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="56%"></div>
+                <div class="hexagon-item" data-skill="Java" data-level="6">
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fab fa-java"></i>
+                      <span>Java</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">C/C++</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="49%"></div>
+                <div class="hexagon-item" data-skill="C/C++" data-level="5">
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fab fa-cuttlefish"></i>
+                      <span>C/C++</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Go</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="11%"></div>
+                <div class="hexagon-item" data-skill="Go" data-level="1">
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fab fa-golang"></i>
+                      <span>Go</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">SQL</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="55%"></div>
+                <div class="hexagon-item" data-skill="SQL" data-level="6">
+                  <div class="hexagon">
+                    <div class="hexagon-content">
+                      <i class="fas fa-database"></i>
+                      <span>SQL</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- Technologies & Tools Section -->
             <div class="resume-section">
               <h4>Technologies & Tools</h4>
-              <div class="skill-item">
-                <span class="skill-name">React</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="90%"></div>
+              <div class="tech-tools-container">
+                <div class="tech-item" data-proficiency="Advanced">
+                  <i class="fab fa-react"></i>
+                  <span>React</span>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Node.js</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="85%"></div>
+                <div class="tech-item" data-proficiency="Advanced">
+                  <i class="fab fa-node-js"></i>
+                  <span>Node.js</span>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Next.js</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="80%"></div>
+                <div class="tech-item" data-proficiency="Advanced">
+                  <i class="fab fa-react"></i>
+                  <span>Next.js</span>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Docker</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="60%"></div>
+                <div class="tech-item" data-proficiency="Intermediate">
+                  <i class="fab fa-docker"></i>
+                  <span>Docker</span>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Git</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="90%"></div>
+                <div class="tech-item" data-proficiency="Advanced">
+                  <i class="fab fa-git-alt"></i>
+                  <span>Git</span>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">AWS</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="30%"></div>
+                <div class="tech-item" data-proficiency="Beginner">
+                  <i class="fab fa-aws"></i>
+                  <span>AWS</span>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Figma</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="80%"></div>
+                <div class="tech-item" data-proficiency="Intermediate">
+                  <i class="fab fa-figma"></i>
+                  <span>Figma</span>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Postman</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="60%"></div>
+                <div class="tech-item" data-proficiency="Intermediate">
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Postman</span>
                 </div>
               </div>
             </div>
+
+            <!-- Soft Skills Section -->
             <div class="resume-section">
               <h4>Soft Skills</h4>
-              <div class="skill-item">
-                <span class="skill-name">Problem Solving</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="80%"></div>
+              <div class="soft-skills-list">
+                <div class="soft-skill-item">
+                  <div class="soft-skill-icon">
+                    <i class="fas fa-brain"></i>
+                  </div>
+                  <div class="soft-skill-content">
+                    <h5>Problem Solving</h5>
+                    <p>
+                      Analytical approach to complex challenges with innovative
+                      solutions
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Team Collaboration</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="90%"></div>
+                <div class="soft-skill-item">
+                  <div class="soft-skill-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="soft-skill-content">
+                    <h5>Team Collaboration</h5>
+                    <p>
+                      Effective communication and cooperation in diverse team
+                      settings
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Communication</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="85%"></div>
+                <div class="soft-skill-item">
+                  <div class="soft-skill-icon">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <div class="soft-skill-content">
+                    <h5>Communication</h5>
+                    <p>
+                      Clear and concise information exchange with technical and
+                      non-technical stakeholders
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Project Management</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 0%" data-width="60%"></div>
+                <div class="soft-skill-item">
+                  <div class="soft-skill-icon">
+                    <i class="fas fa-tasks"></i>
+                  </div>
+                  <div class="soft-skill-content">
+                    <h5>Project Management</h5>
+                    <p>
+                      Organizing resources and timeline management for project
+                      success
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -297,13 +422,21 @@
         <h2 data-aos="fade-up">Experience</h2>
 
         <div class="tabs" data-aos="fade-up">
-          <button class="tab active" data-target="work-content">Work Experience</button>
-          <button class="tab" data-target="committees-content">Committees & Bootcamps</button>
+          <button class="tab active" data-target="work-content">
+            Work Experience
+          </button>
+          <button class="tab" data-target="committees-content">
+            Committees & Bootcamps
+          </button>
         </div>
 
         <div class="tab-content" id="work-content" data-aos="fade-up">
           <div class="experience-grid">
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="100">
+            <div
+              class="experience-item"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <h3>Freelance Full Stack Developer</h3>
               <p class="company">FKUB Kota Makassar</p>
               <p class="date">July 2024 - Present</p>
@@ -313,7 +446,11 @@
               </p>
             </div>
 
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="200">
+            <div
+              class="experience-item"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <h3>Staff Frontend Developer</h3>
               <p class="company">ITB Fair 2024</p>
               <p class="date">February 2024 - May 2024</p>
@@ -323,7 +460,11 @@
               </p>
             </div>
 
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="300">
+            <div
+              class="experience-item"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <h3>Junior Developer</h3>
               <p class="company">StartUp Ventures</p>
               <p class="date">July 2024 - August 2024</p>
@@ -335,9 +476,18 @@
           </div>
         </div>
 
-        <div class="tab-content" id="committees-content" style="display: none;" data-aos="fade-up">
+        <div
+          class="tab-content"
+          id="committees-content"
+          style="display: none"
+          data-aos="fade-up"
+        >
           <div class="experience-grid">
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="100">
+            <div
+              class="experience-item"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <h3>Web Development Bootcamp</h3>
               <p class="company">Tech Innovators</p>
               <p class="date">June 2023 - August 2023</p>
@@ -346,17 +496,25 @@
               </p>
             </div>
 
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="200">
+            <div
+              class="experience-item"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <h3>Dicoding Bootcamp</h3>
               <p class="company">Dicoding</p>
               <p class="date">January 2023</p>
               <p>
-                Completed a course on Dicoding to learn about the basics of
-                web development.
+                Completed a course on Dicoding to learn about the basics of web
+                development.
               </p>
             </div>
 
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="300">
+            <div
+              class="experience-item"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <h3>Staff of Intracampus HMIF ITB</h3>
               <p class="company">HMIF ITB</p>
               <p class="date">Present</p>
@@ -379,7 +537,12 @@
           <button class="filter-btn" data-filter="next">Next.js</button>
         </div>
         <div class="portfolio-grid" data-aos="fade-up">
-          <div class="portfolio-item" data-category="web next" data-aos="zoom-in" data-aos-delay="100">
+          <div
+            class="portfolio-item"
+            data-category="web next"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
             <div class="portfolio-overlay">
               <img
                 src="./assets/portfolio-1.png"
@@ -388,7 +551,12 @@
               />
               <div class="overlay-content">
                 <div class="overlay-icons">
-                  <a href="https://fkub-makassar.or.id/" target="_blank" class="overlay-icon"><i class="fas fa-link"></i></a>
+                  <a
+                    href="https://fkub-makassar.or.id/"
+                    target="_blank"
+                    class="overlay-icon"
+                    ><i class="fas fa-link"></i
+                  ></a>
                   <!-- <a href="https://github.com/Dabbir" target="_blank" class="overlay-icon"><i class="fab fa-github"></i></a> -->
                 </div>
               </div>
@@ -407,7 +575,12 @@
               <!-- <a href="https://fkub-makassar.or.id/" class="portfolio-link" target="_blank">View Project</a> -->
             </div>
           </div>
-          <div class="portfolio-item" data-category="java" data-aos="zoom-in" data-aos-delay="200">
+          <div
+            class="portfolio-item"
+            data-category="java"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             <div class="portfolio-overlay">
               <img
                 src="./assets/portfolio-2.png"
@@ -416,7 +589,12 @@
               />
               <div class="overlay-content">
                 <div class="overlay-icons">
-                  <a href="https://github.com/Dabbir/Tucil3_13522072" target="_blank" class="overlay-icon"><i class="fab fa-github"></i></a>
+                  <a
+                    href="https://github.com/Dabbir/Tucil3_13522072"
+                    target="_blank"
+                    class="overlay-icon"
+                    ><i class="fab fa-github"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -434,7 +612,12 @@
               <!-- <a href="https://github.com/Dabbir/Tucil3_13522072" class="portfolio-link" target="_blank">View Project</a> -->
             </div>
           </div>
-          <div class="portfolio-item" data-category="web next" data-aos="zoom-in" data-aos-delay="300">
+          <div
+            class="portfolio-item"
+            data-category="web next"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             <div class="portfolio-overlay">
               <img
                 src="./assets/portfolio-3.png"
@@ -443,7 +626,12 @@
               />
               <div class="overlay-content">
                 <div class="overlay-icons">
-                  <a href="https://github.com/zultopia/Venture" target="_blank" class="overlay-icon"><i class="fab fa-github"></i></a>
+                  <a
+                    href="https://github.com/zultopia/Venture"
+                    target="_blank"
+                    class="overlay-icon"
+                    ><i class="fab fa-github"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -451,8 +639,8 @@
               <h3>Venture</h3>
               <p>
                 A digital platform designed to empower vendors in Jakarta by
-                integrating their businesses into the broader digital economy
-                to support vendors in achieving sustainable growth.
+                integrating their businesses into the broader digital economy to
+                support vendors in achieving sustainable growth.
               </p>
               <div class="portfolio-tags">
                 <span class="portfolio-tag">Next.js</span>
@@ -483,28 +671,52 @@
               <p>Bandung, Indonesia</p>
             </div>
             <div class="social-links">
-              <a href="https://www.linkedin.com/in/ahmad-mudabbir-1261731a7/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/Dabbir/" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://x.com/homiipedd" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/amd.a_/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a
+                href="https://www.linkedin.com/in/ahmad-mudabbir-1261731a7/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Dabbir/" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://x.com/homiipedd" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/amd.a_/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </div>
           <div class="contact-form">
             <form id="contact-form">
               <div class="form-group">
-                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="name" placeholder="Your Name" required />
                 <span class="focus-border"></span>
               </div>
               <div class="form-group">
-                <input type="email" id="email" placeholder="Your Email" required>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
                 <span class="focus-border"></span>
               </div>
               <div class="form-group">
-                <input type="text" id="subject" placeholder="Subject" required>
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
                 <span class="focus-border"></span>
               </div>
               <div class="form-group">
-                <textarea id="message" placeholder="Your Message" required></textarea>
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
                 <span class="focus-border"></span>
               </div>
               <button type="submit" class="submit-btn">Send Message</button>
@@ -526,14 +738,27 @@
           <a href="#contact">Contact</a>
         </div>
         <div class="footer-social">
-          <a href="https://www.linkedin.com/in/ahmad-mudabbir-1261731a7/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/Dabbir/" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/homiipedd" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/amd.a_/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a
+            href="https://www.linkedin.com/in/ahmad-mudabbir-1261731a7/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/Dabbir/" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://x.com/homiipedd" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/amd.a_/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> Ahmad Mudabbir Arif. All rights reserved.</p>
+        <p>
+          &copy; <span id="current-year"></span> Ahmad Mudabbir Arif. All rights
+          reserved.
+        </p>
         <div class="back-to-top" id="back-to-top">
           <i class="fas fa-arrow-up"></i>
         </div>
