@@ -53,7 +53,7 @@ PROJECTS = [
     {
         "title":  "ShowOnAI",
         "year":   "2025",
-        "role":   "Sole Developer",
+        "role":   "FE & BE Developer",
         "link":   "Not publicly available",
         "image":  "portfolio-4.png",
         "description": (
@@ -93,7 +93,7 @@ PROJECTS = [
     {
         "title":  "Official Website FKUB Makassar",
         "year":   "2024",
-        "role":   "Sole Full Stack Developer",
+        "role":   "Full Stack Developer",
         "link":   "fkub-makassar.or.id",
         "image":  "portfolio-1-new.png",
         "description": (
