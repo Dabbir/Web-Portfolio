@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Apple Developer Academy Indonesia – Portfolio PDF Generator
-Matches the official NamaLengkap_Portofolio_Academy.pdf template.
-Output: docs/AhmadMudabbir_Portfolio_Academy.pdf
+Portfolio PDF Generator – Ahmad Mudabbir Arif
+Output: docs/AhmadMudabbir_Portfolio.pdf
 """
 
 import os
@@ -18,7 +17,7 @@ from reportlab.lib.enums import TA_LEFT
 # ── Paths ────────────────────────────────────────────────────────────────────
 BASE   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(BASE, "assets")
-OUT    = os.path.join(BASE, "docs", "AhmadMudabbir_Portfolio_Academy.pdf")
+OUT    = os.path.join(BASE, "docs", "AhmadMudabbir_Portfolio.pdf")
 
 PW, PH = landscape(A4)   # 841.89 × 595.28 pt
 
@@ -57,17 +56,39 @@ PROJECTS = [
         "link":   "Not publicly available",
         "image":  "portfolio-4.png",
         "description": (
-            "ShowOnAI is a self-initiated full-stack SaaS platform designed to help brands "
-            "monitor and optimize their visibility on AI-powered search engines such as ChatGPT, "
-            "Perplexity, and Gemini. It features an analytics dashboard tracking Share of Voice, "
-            "Brand Mentions, and SEO reporting, alongside a blog CMS with structured JSON-LD support.\n\n"
-            "This is an individual, self-initiated project, built entirely from scratch with no "
-            "external team.\n\n"
+            "ShowOnAI is a full-stack SaaS platform designed to help brands monitor and optimize "
+            "their visibility on AI-powered search engines such as ChatGPT, Perplexity, and Gemini. "
+            "It features an analytics dashboard tracking Share of Voice, Brand Mentions, and SEO "
+            "reporting, alongside a user onboarding flow, demo request system with email notification "
+            "integration, and a blog CMS with SEO metadata & JSON-LD support.\n\n"
+            "TEAM PROJECT (3 developers). My role: Frontend & Backend Developer responsible for the "
+            "Next.js frontend, RESTful APIs, and optimized PostgreSQL queries for large-scale data.\n\n"
             "Impact: Delivered a working SaaS MVP capable of tracking AI search engine presence, "
             "a capability that most existing SEO tools do not yet offer.\n\n"
             "What I learned: I deepened my understanding of full-stack architecture (Next.js + Go "
             "microservices), containerised deployment with Docker, and how modern AI search engines "
             "surface web content differently from traditional search."
+        ),
+    },
+    {
+        "title":  "SIGAP",
+        "year":   "2024",
+        "role":   "AI & IoT Developer",
+        "link":   "Not publicly available",
+        "image":  "portfolio-7.png",
+        "description": (
+            "SIGAP is an AI & IoT-based driver monitoring system for real-time microsleep detection, "
+            "developed for Samsung Innovation Campus Batch 6 (AI+ in Everyday Life). It integrates "
+            "computer vision using MediaPipe for facial landmark analysis with IoT hardware (ESP32-CAM) "
+            "to detect drowsiness indicators and trigger real-time alerts to prevent accidents.\n\n"
+            "TEAM PROJECT. My role: AI/Computer Vision Developer responsible for the MediaPipe "
+            "drowsiness detection pipeline, alert logic, and monitoring dashboard.\n\n"
+            "Impact: Won 2nd Place [International] at Samsung Innovation Campus Batch 6 (2024), "
+            "competing nationally hosted by Hacktiv8 Indonesia. The system addresses a critical road "
+            "safety problem with a low-cost, deployable hardware-software solution.\n\n"
+            "What I learned: I gained practical experience combining computer vision with IoT hardware, "
+            "learned to optimise real-time inference pipelines for embedded devices, and understood "
+            "the importance of latency in safety-critical systems."
         ),
     },
     {
@@ -77,12 +98,13 @@ PROJECTS = [
         "link":   "Not publicly available",
         "image":  "portfolio-5.png",
         "description": (
-            "Wellborne is a desktop application for automated oil and gas well risk assessment, "
-            "developed during my internship at PT Paragon Technology and Innovation. It automates "
-            "density, leakage, and scoring calculations, supports bulk data import via Excel, "
-            "and exports professional reports to both Excel and PDF. Interactive data visualisations "
-            "are powered by Plotly, and the app is packaged as a standalone .exe for field use.\n\n"
-            "This is a work assignment, developed individually as part of my internship scope.\n\n"
+            "Wellborne is a desktop application for automated oil and gas well risk assessment. "
+            "It automates density, leakage, and scoring calculations based on industry-standard "
+            "rulesets, supports bulk data import via Excel, and exports professional reports to both "
+            "Excel and PDF. Interactive data visualisations are powered by Plotly, and the app is "
+            "packaged as a standalone .exe for field use.\n\n"
+            "TEAM PROJECT (2 developers). My role: Full Stack Developer responsible for the core "
+            "risk calculation engine, UI, and report generation.\n\n"
             "Impact: Reduced manual calculation time significantly for well engineers, replacing "
             "error-prone spreadsheet workflows with a validated, auditable desktop tool.\n\n"
             "What I learned: I gained hands-on experience in desktop GUI development with Python/Flet, "
@@ -93,16 +115,15 @@ PROJECTS = [
     {
         "title":  "Official Website FKUB Makassar",
         "year":   "2024",
-        "role":   "Full Stack Developer",
+        "role":   "Full Stack Developer (Sole Developer)",
         "link":   "fkub-makassar.or.id",
         "image":  "portfolio-1-new.png",
         "description": (
             "The official website for FKUB (Forum Kerukunan Umat Beragama) Kota Makassar, a "
-            "city-level interfaith council, providing a public digital presence for a government-recognised "
-            "institution. The site features a landing page, news and articles, a photo gallery, and a "
-            "digital registration system for houses of worship.\n\n"
-            "This is a work assignment (contract). I was the sole developer, responsible for design, "
-            "development, and deployment.\n\n"
+            "city-level interfaith council. The site features a landing page, news and articles, "
+            "a photo gallery, and a digital registration system for houses of worship.\n\n"
+            "INDIVIDUAL PROJECT (Contract). I was the sole developer, responsible for design, "
+            "development, deployment, and ongoing administration.\n\n"
             "Impact: Gave FKUB Makassar its first professional online presence, enabling the public "
             "to access institutional news and submit worship registrations digitally, reducing "
             "administrative overhead for the council.\n\n"
@@ -122,11 +143,11 @@ PROJECTS = [
             "into the digital economy, offering integrated payments, inventory management, and sales "
             "tracking. It was built during HackJakarta 2024 (AngelHack & RISTEK CS UI) and reached "
             "the finals as one of the Top 5 teams out of 20+ in the Financial Inclusion track.\n\n"
-            "GROUP PROJECT (Team of 4 developers). My role: Full Stack Developer responsible for the "
-            "Next.js backend API, database schema, and payment gateway integration.\n\n"
+            "TEAM PROJECT (4 developers). My role: Full Stack Developer responsible for the Next.js "
+            "backend API, database schema, and payment gateway integration.\n\n"
             "Impact: Demonstrated a viable product for financial inclusion, impressing judges at "
-            "Grab Office, Jakarta South Quarter. The solution targeted an underserved segment of "
-            "micro-entrepreneurs with limited access to digital financial tools.\n\n"
+            "Grab Office, Jakarta South Quarter, targeting micro-entrepreneurs with limited digital "
+            "financial tools access.\n\n"
             "What I learned: Building under hackathon pressure taught me rapid prototyping, product "
             "prioritisation, and pitching to a non-technical audience. I also learned how to integrate "
             "third-party payment APIs securely within a tight deadline."
@@ -141,20 +162,18 @@ PROJECTS = [
         "description": (
             "PhyloGeoVis is an interactive web application that merges phylogenomic analysis with "
             "geospatial visualisation to support conservation prioritisation of three endangered "
-            "orangutan species across Indonesia. It features an interactive phylogenetic tree "
-            "(Neighbor-Joining & Maximum Likelihood methods), genetic diversity indices, "
-            "Population Viability Analysis with Monte Carlo simulation, and an interactive "
-            "distribution map sourced from GBIF and NCBI GenBank.\n\n"
-            "GROUP PROJECT (Team of 5). My role: Full Stack Developer responsible for the React "
+            "orangutan species across Indonesia. Features an interactive phylogenetic tree "
+            "(Neighbor-Joining & Maximum Likelihood), genetic diversity indices, Population Viability "
+            "Analysis with Monte Carlo simulation, and an interactive distribution map sourced from "
+            "GBIF and NCBI GenBank.\n\n"
+            "TEAM PROJECT (5 developers). My role: Full Stack Developer responsible for the React "
             "frontend, interactive map (Leaflet.js), phylogenetic tree rendering, and bioinformatics "
             "data pipeline integration.\n\n"
             "Impact: Produced a research-quality tool that makes complex biodiversity data accessible "
-            "to conservation practitioners without bioinformatics expertise, bridging the gap between "
-            "genomic data and field decision-making.\n\n"
-            "What I learned: I explored an entirely new domain (bioinformatics and conservation "
-            "science), learning to translate scientific algorithms into interactive visualisations. "
-            "This project reinforced my belief in technology's power to serve environmental and "
-            "social good."
+            "to conservation practitioners without bioinformatics expertise.\n\n"
+            "What I learned: I explored bioinformatics and conservation science, learning to translate "
+            "scientific algorithms into interactive visualisations, reinforcing technology's role in "
+            "environmental and social good."
         ),
     },
 ]
@@ -174,7 +193,6 @@ def draw_sidebar_entry(c, label, value, x, y, max_y):
     c.setFont("Helvetica-Oblique", 8.5)
     c.setFillColor(LIGHT_GRAY)
 
-    # Wrap value manually (sidebar is narrow)
     words = value.split()
     line  = ""
     for word in words:
@@ -213,7 +231,7 @@ def wrap_text_to_box(c, text, x, y, width, line_height, font, size, color):
             c.drawString(x, y, line)
             y -= line_height
         if i < len(paragraphs) - 1:
-            y -= line_height * 0.5   # paragraph gap
+            y -= line_height * 0.5
     return y
 
 def draw_project_page(c, project, index):
@@ -235,14 +253,10 @@ def draw_project_page(c, project, index):
     sy = CONTENT_T - 2
     sx = M
 
-    # Title label + value
-    sy = draw_sidebar_entry(c, "Artwork/Project Title", project["title"], sx, sy, CONTENT_B)
-    # Year
-    sy = draw_sidebar_entry(c, "Year Accomplished",    project["year"],  sx, sy, CONTENT_B)
-    # Role
-    sy = draw_sidebar_entry(c, "Role/Position",        project["role"],  sx, sy, CONTENT_B)
-    # Link
-    sy = draw_sidebar_entry(c, "Publication Link",     project["link"],  sx, sy, CONTENT_B)
+    sy = draw_sidebar_entry(c, "Project Title",  project["title"], sx, sy, CONTENT_B)
+    sy = draw_sidebar_entry(c, "Year",           project["year"],  sx, sy, CONTENT_B)
+    sy = draw_sidebar_entry(c, "Role",           project["role"],  sx, sy, CONTENT_B)
+    sy = draw_sidebar_entry(c, "Link",           project["link"],  sx, sy, CONTENT_B)
 
     # ── Vertical divider ──
     c.setStrokeColor(RULE_GRAY)
@@ -253,13 +267,11 @@ def draw_project_page(c, project, index):
     rx = RIGHT_X
     ry = CONTENT_T
 
-    # Description label
     c.setFont("Helvetica-Bold", 7.5)
     c.setFillColor(DARK_GRAY)
-    c.drawString(rx, ry, "Artwork/Project Description")
+    c.drawString(rx, ry, "Project Description")
     ry -= 14
 
-    # Description text
     desc_y = wrap_text_to_box(
         c, project["description"],
         rx, ry, RIGHT_W,
@@ -267,16 +279,15 @@ def draw_project_page(c, project, index):
         font="Helvetica", size=8.5,
         color=DARK_GRAY,
     )
-    desc_y -= 10   # gap before image
+    desc_y -= 10
 
     # ── Project image ──
     img_path = os.path.join(ASSETS, project["image"])
     img_x    = rx
-    img_y    = CONTENT_B   # bottom of image (above footer rule)
+    img_y    = CONTENT_B
     img_h    = max(desc_y - img_y - 4, 10)
     img_w    = RIGHT_W
 
-    # Grey placeholder background
     c.setFillColor(IMG_BG)
     c.setStrokeColor(RULE_GRAY)
     c.setLineWidth(0.4)
@@ -326,15 +337,15 @@ def draw_project_page(c, project, index):
                "+62 821-8702-6140",
                "linkedin.com/in/ahmad-mudabbir-1261731a7")
     footer_col(3,
-               "Portfolio Submission for",
-               "Apple Developer Academy",
-               "Indonesia")
+               "github.com/Dabbir",
+               "Informatics Engineering",
+               "ITB — Class of 2022")
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     c = pdf_canvas.Canvas(OUT, pagesize=landscape(A4))
-    c.setTitle("Ahmad Mudabbir Arif – Portfolio – Apple Developer Academy Indonesia")
+    c.setTitle("Ahmad Mudabbir Arif – Portfolio")
     c.setAuthor("Ahmad Mudabbir Arif")
 
     for i, project in enumerate(PROJECTS):
